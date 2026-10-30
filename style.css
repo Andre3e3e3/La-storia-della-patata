@@ -1,0 +1,107 @@
+/* Colori: rinomina queste variabili con i nomi degli stili di Figma */
+:root {
+  --colore-sfondo: #684f3f;
+  --colore-barra: #4e3a2e;
+  --colore-riquadro: #3f2d1d;
+  --colore-testo: #ffffff;
+  --colore-velo: rgba(0, 0, 0, 0.5);
+}
+
+/* Reset semplice */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo);
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--colore-testo);
+  text-decoration: none;
+}
+
+/* Contenitore: larghezza massima 480px, con 15px di margine ai lati su schermi piccoli */
+.contenitore {
+  width: min(100% - 30px, 480px);
+  margin-inline: auto;
+}
+
+/* Menu in alto */
+nav {
+  background-color: var(--colore-barra);
+  padding: 10px 0;
+}
+
+/* Immagine iniziale con titolo sopra */
+header .contenitore {
+  position: relative; 
+}
+
+.titolo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--colore-velo);
+  padding: 15px;
+}
+
+.titolo h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.titolo p {
+  font-size: 1rem;
+}
+
+/* Sezioni */
+section {
+  padding: 20px 0 0;
+}
+
+section p {
+  background-color: var(--colore-riquadro);
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+section img {
+  margin-bottom: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--colore-testo);
+  margin-bottom: 20px;
+}
+
+/* Frase finale */
+section p.finale {
+  background-color: transparent;
+  border: 1px solid var(--colore-testo);
+  font-size: 1.2rem;
+}
+
+/* Footer: link affiancati con Flexbox */
+footer {
+  background-color: var(--colore-barra);
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+footer .contenitore {
+  display: flex;
+  justify-content: space-between;
+}
